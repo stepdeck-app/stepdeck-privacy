@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for the Stepdeck browser extension.">
+  <title>Stepdeck Privacy Policy</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0; padding: 40px 20px; background: #f7f7f8; color: #202124;
+      font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 900px; margin: 0 auto; padding: 40px;
+      background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.04);
+    }
+    h1 { line-height: 1.2; margin-top: 0; }
+    h2 { margin-top: 2em; line-height: 1.3; }
+    table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; }
+    th, td { padding: 10px 12px; border: 1px solid #d9dde3; text-align: left; vertical-align: top; }
+    th { background: #f1f3f5; }
+    a { color: #1558b0; overflow-wrap: anywhere; }
+    code { overflow-wrap: anywhere; }
+    .meta { margin: 0 0 4px; }
+    @media (max-width: 600px) {
+      body { padding: 12px; }
+      main { padding: 22px 18px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Stepdeck Privacy Policy</h1>
+  <p class="meta"><strong>Effective date:</strong> __SET_ME__ (replace with the actual publication date before publishing)</p>
+  <p class="meta"><strong>Publisher:</strong> Mohamed Mohamed Alaa Eldin Ibrahim (individual developer of Stepdeck)</p>
+  <p class="meta"><strong>Contact:</strong> <a href="mailto:stepdeck.support@gmail.com">stepdeck.support@gmail.com</a></p>
+
+  <p>Stepdeck is a browser extension that records the steps you take on a website and turns them into a step-by-step guide with screenshots. This policy explains exactly what the extension handles and where it goes.</p>
+
+  <h2>Summary</h2>
+  <ul>
+    <li>Your guides and screenshots are stored only in your browser, on your computer.</li>
+    <li>We do not run servers that receive your data. There are no accounts, analytics, ads or trackers.</li>
+    <li>The only network request the extension makes is to Gumroad, to check a Pro license key you enter.</li>
+  </ul>
+
+  <h2>What Stepdeck handles, only while you are recording</h2>
+  <table>
+    <thead><tr><th>Data</th><th>Why</th><th>Where it is kept</th></tr></thead>
+    <tbody>
+      <tr><td>Screenshots of the visible part of the tab you click in: before each click and, when a click opens a page, that page</td><td>The images in your guide</td><td>Your browser (IndexedDB)</td></tr>
+      <tr><td>Text of the button, link or field you click; page address and title</td><td>Writing the step text, e.g. <em>Click "Save"</em></td><td>Your browser</td></tr>
+      <tr><td>Positions of clicks and of fields detected as private</td><td>Placing the click marker and blurring private areas</td><td>Your browser</td></tr>
+      <tr><td>Your guide titles, notes, settings and logo</td><td>Editing and exporting</td><td>Your browser (IndexedDB, chrome.storage)</td></tr>
+    </tbody>
+  </table>
+
+  <p>Recording starts only when you press <strong>Start recording</strong> and stops when you press <strong>Stop</strong>. While recording, the extension also runs on pages you open in that window so it can notice clicks right after a page loads. It sends nothing anywhere.</p>
+
+  <h2>Important: screenshots show what is on your screen</h2>
+  <p>Stepdeck does not save the text you type as text. Password fields, payment data (card number, expiry, security code, payment frames, card numbers and IBANs shown on the page) and API keys / secret tokens are always hidden: they are painted over in the screenshot itself before it is saved, and this can't be undone or turned off. Personal details typed into forms (names, company, address, postal code, birth date, email, phone) are blurred automatically in the editor and in every export (HTML, PDF, Markdown, Copy for Docs). The original screenshot under these blurs stays in your browser's local storage so a blur can be removed; removing one asks for confirmation, and the review screen before every export lists what is still hidden and warns if personal data was unblurred. Screenshots are never sent anywhere: the only network request Stepdeck makes is the license check, which sends your license key and the product ID, nothing else. Fields are recognized from their type, autocomplete value, name, label, placeholder and the text shown next to them. Automatic detection can miss things, though, and <strong>anything visible on screen can appear in a screenshot</strong>, including text you typed. Before every export, Stepdeck shows a review screen. Check it before you share a guide.</p>
+
+  <p>By default, exported guides drop the part of page addresses after <code>?</code> and <code>#</code>, because it can contain private tokens. You can include full addresses on the review screen.</p>
+
+  <h2>Network requests</h2>
+  <ul>
+    <li><strong>License check (Pro only):</strong> when you activate a license key, and about every 14 days after that, Stepdeck sends the key and the product ID to Gumroad's license API (<a href="https://api.gumroad.com/v2/licenses/verify">https://api.gumroad.com/v2/licenses/verify</a>). Gumroad answers whether the key is valid. Gumroad's own privacy policy covers its processing: <a href="https://gumroad.com/privacy">https://gumroad.com/privacy</a></li>
+    <li><strong>Links you click</strong> in the extension (for example "Get Pro" or this policy) open normally in your browser.</li>
+    <li>Nothing else. No guide content, screenshot or page address is ever sent by the extension.</li>
+  </ul>
+
+  <h2>Exports and sharing</h2>
+  <p>Exported files (HTML, PDF, Markdown, clipboard) are created on your computer. What happens to them after that, such as emailing or uploading them, is up to you.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><strong>Access to the sites you record</strong> (requested during setup, and you can revoke it at any time in <code>chrome://extensions</code>): needed to see clicks and take screenshots.</li>
+    <li><strong>scripting:</strong> to run the recorder in the tab you are recording.</li>
+    <li><strong>storage / unlimitedStorage:</strong> to keep guides and screenshots on your computer.</li>
+    <li><strong>api.gumroad.com:</strong> for the license check described above.</li>
+  </ul>
+
+  <h2>Keeping and deleting data</h2>
+  <p>Guides stay until you delete them. Deleting a guide removes its screenshots. Removing the extension or clearing your browser's site data deletes everything Stepdeck stored. We cannot recover it, because we never had a copy.</p>
+
+  <h2>Children</h2>
+  <p>Stepdeck is a work tool and is not directed at children under 13.</p>
+
+  <h2>Chrome Web Store User Data Policy</h2>
+  <p>The use of information received by this extension adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements. Stepdeck does not sell user data, does not use it for advertising or credit decisions, and does not transfer it to third parties except the license key check described above.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the new version will be published at this address with a new effective date.</p>
+</main>
+</body>
+</html>
